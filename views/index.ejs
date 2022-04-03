@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>NEWS HOME</title>
+</head>
+
+<body>
+    <main class="mainArticle">
+        <% news.forEach((newsArticle)=> { %>
+            <article>
+                <h3>
+                    <%- newsArticle.title -%>
+                </h3>
+                <p class="bold">
+                    <%- newsArticle.publishedAt -%>
+                </p>
+                <figure><img src="<%- newsArticle.urlToImage -%> " alt="StockPhoto"></figure>
+                <p>
+                    <%= newsArticle.content.slice(0,newsArticle.content.length - 16).concat("...") %>
+                </p>
+                <div>
+                    <h5>
+                        <%- newsArticle.author -%>
+                    </h5>
+                    <h6> <a href="/news/<%- newsArticle.publishedAt -%>"> Click4More</a></h6>
+                </div>
+            </article>
+            <% }) %>
+
+    </main>
+
+</body>
+
+</html>

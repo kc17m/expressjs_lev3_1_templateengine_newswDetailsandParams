@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Details</title>
+</head>
+
+<body>
+    <h1 class="detailsHead">Details on Selected Article</h1>
+    <main class="mainDetail">
+        <h1>
+            <%- articleDetail.title %>
+        </h1>
+        <figure class="detailFig"><img src="<%- articleDetail.urlToImage -%> " alt="StockPhoto"></figure>
+        <p>
+            <%= articleDetail.content %>
+        </p>
+        <div>
+            <p class="bold">Author: <br>
+                <%- articleDetail.author -%>
+            </p>
+            <p class="bold">Published at: <br>
+                <%- articleDetail.publishedAt -%>
+            </p>
+
+        </div>
+        <button><a href="/">Back to main page</a></button>
+    </main>
+
+</body>
+
+</html>
