@@ -1,0 +1,2 @@
+# expressjs_lev3_1_templateengine_newswDetailsandParams
+details page added
